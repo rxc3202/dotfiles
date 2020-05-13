@@ -1,0 +1,41 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery"],
+    "sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "focused": ""
+        }
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "deactivated": " ",
+            "activated": " "
+        }
+    },
+	"pulseaudio": {
+        "format": "{volume}%",
+		"on-click": "pavucontrol"
+	},
+	"network": {
+		"format-wifi": " {essid} ({signalStrength}%)",
+		"format-disconnected": "Disconnected",
+        "on-click": "nm-connection-editor"
+	},
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [""]
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%a, %d. %b  %H:%M}"
+    }
+}

@@ -1,0 +1,133 @@
+
+* {
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    font-family: "OverpassMono";
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+#window {
+    font-family: "OverpassMono";
+}
+
+
+#mode {
+    background: #64727D;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode,
+#custom-updates {
+    padding: 0 10px;
+    margin: 0 5px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, .1);
+    border-top: 3px solid rgba(255, 255, 255, .2);
+}
+
+/* ======================= BATTERY CONFIGURATION ======================= */
+#battery {
+}
+
+#battery:not(.charging) {
+    border-top: 3px solid green;
+}
+#battery.good:not(.charging) {
+    border-top: 3px solid #26A65B;
+}
+#battery.medium:not(.charging) {
+    border-top: 3px solid yellow;
+}
+#battery.warning:not(.charging) {
+    border-top: 3px solid orange;
+}
+#battery.charging {
+    border-top: 3px solid #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* ======================= CLOCK CONFIGURATION ======================= */
+#clock {
+    background: transparent;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+/* ======================= CPU CONFIGURATION ======================= */
+#cpu {
+}
+
+/* ======================= MEMORY CONFIGURATION ======================= */
+#memory {
+}
+
+/* ======================= NETWORK CONFIGURATION ======================= */
+#network {
+}
+
+#network.disconnected {
+	color: red;
+}
+
+/* ======================= PULSE AUDIO CONFIGURATION ======================= */
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+/* ======================= TRAY CONFIGURATION ======================= */
+#tray {
+}
+
+/*
+ * Workspaces
+ */
+
+#workspaces button {
+    /*border-top: 2px solid transparent;*/
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#workspaces button.focused {
+    border-color: #ffffff;
+    color: white;
+    background-color: rgba(100, 114, 125, 0.2);
+    border-top: 3px solid #ffffff;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: #c9545d;
+}
+
+
