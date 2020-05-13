@@ -3,7 +3,7 @@
 set $mod Mod1
 
 ### Custom configs
-include "~/.config/sway/custom-keybinds"
+include "~/.config/sway/keybinds"
 
 # Home row direction keys, like vim
 set $left h
