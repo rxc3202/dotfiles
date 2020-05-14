@@ -1,13 +1,14 @@
 * {
     font-weight: bold;
     border: none;
-    border-radius: 0; font-family: "OverpassMono";
-    font-size: 15px;
+    border-radius: 0; font-family: "SourceCodePro";
+    font-size: 17px;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
+    /*background: transparent;*/
+    background: rgba(0,0,0, 0.3);
     color: white;
 }
 
@@ -21,7 +22,7 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode,
-#custom-updates, #custom-bluetooth {
+#custom-updates, #custom-bluetooth, #custom-spotify{
     padding: 0 10px;
     margin: 0 5px;
     color: #ffffff;
@@ -144,5 +145,11 @@ window#waybar {
 }
 
 #custom-bluetooth.on {
-    color: #81a1c1;
+    /*color: #81a1c1;*/
+    color: #ffffff;
+}
+
+/* ======================= SPOTIFY CONFIGURATION ======================= */
+#custom-spotify {
+    border-top: 3px solid #1DB954;
 }

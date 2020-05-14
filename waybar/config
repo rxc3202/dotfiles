@@ -4,8 +4,8 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/updates", "pulseaudio", "network", "custom/bluetooth", "battery"],
+    "modules-center": ["custom/spotify"],
+    "modules-right": ["custom/updates", "pulseaudio", "network", "custom/bluetooth", "battery", "clock"],
     "sway/workspaces": {
 	"persistent_workspaces": {
 		"1": [],
@@ -75,7 +75,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%A %b %d %r}",
+        "format": "{:%a %b %d %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>"
         //"format-alt": "{:%Y-%m-%d}"
     },
@@ -166,6 +166,7 @@
         "exec-if": "ping wttr.in -c1"
     },
     "custom/spotify": {
+            "format": " Spotify",
 	    "interval": 1,
 	    "return-type": "json",
 	    "exec": "~/.config/waybar/modules/spotify.sh",

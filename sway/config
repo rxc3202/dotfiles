@@ -18,8 +18,8 @@ set $term alacritty # Your preferred application launcher
 set $menu "rofi -combi-modi drun,ssh,run -show combi -show-icons -theme slate"
 
 ### Background
-set $wallpaper "~/Pictures/wallpapers/neoncity.jpg"
-output * bg ~/Pictures/wallpapers/neoncity.jpg fill
+set $wallpaper "~/Pictures/wallpapers/mountain-blue.jpg"
+output * bg $wallpaper fill
 
 ### Displays
 output eDP-1 scale 1 resolution 2560x1440 position 0,0
