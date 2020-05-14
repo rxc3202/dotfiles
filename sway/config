@@ -107,13 +107,10 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-    set $gaps 6
-    set $border 2
-    default_border pixel $border
-    default_floating_border pixel $border
-    for_window [app_id=".*"] border pixel $border
-    gaps inner $gaps
-    gaps outer 0
+    gaps inner 10
+    gaps outer 5
+    default_border pixel 0
+    default_floating_border pixel 0
 
 ### Scratchpad:
     # Sway has a "scratchpad", which is a bag of holding for windows.
