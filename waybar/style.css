@@ -1,9 +1,7 @@
-
 * {
     font-weight: bold;
     border: none;
-    border-radius: 0;
-    font-family: "OverpassMono";
+    border-radius: 0; font-family: "OverpassMono";
     font-size: 15px;
     min-height: 0;
 }
@@ -35,20 +33,26 @@ window#waybar {
 #battery {
 }
 
+#battery.charging {
+    border-top: 3px solid #8dbf8f;
+    color: #8dbf8f;
+}
+
 #battery:not(.charging) {
-    border-top: 3px solid green;
+    border-top: 3px solid #a3be8c;
+    color: #a3be8c;
 }
 #battery.good:not(.charging) {
-    border-top: 3px solid #26A65B;
+    border-top: 3px solid #a3be8c;
+    color: #a3be8c;
 }
 #battery.medium:not(.charging) {
-    border-top: 3px solid yellow;
+    border-top: 3px solid #fdfd96;
+    color: #fdfd96;
 }
 #battery.warning:not(.charging) {
-    border-top: 3px solid orange;
-}
-#battery.charging {
-    border-top: 3px solid #26A65B;
+    border-top: 3px solid #ebcb8b;
+    color: #ebcb8b;
 }
 
 @keyframes blink {
@@ -60,7 +64,7 @@ window#waybar {
 
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
-    color: #ffffff;
+    color: #bf616a;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -90,7 +94,7 @@ window#waybar {
 }
 
 #network.disconnected {
-	color: red;
+    color: #bf616a;
 }
 
 /* ======================= PULSE AUDIO CONFIGURATION ======================= */
@@ -130,4 +134,15 @@ window#waybar {
     color: #c9545d;
 }
 
+/* ======================= BLUETOOTH CONFIGURATION ======================= */
+#custom-bluetooth.down {
+    color: #bf616a;
+}
 
+#custom-bluetooth.off {
+    color: rgba(255, 255, 255, .2);
+}
+
+#custom-bluetooth.on {
+    color: #81a1c1;
+}

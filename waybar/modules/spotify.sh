@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/zsh
 
 class=$(playerctl metadata --player=spotify --format '{{lc(status)}}')
 icon=""

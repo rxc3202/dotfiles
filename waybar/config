@@ -5,21 +5,33 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/updates", "custom/bluetooth", "pulseaudio", "network", "battery"],
+    "modules-right": ["custom/updates", "pulseaudio", "network", "custom/bluetooth", "battery"],
     "sway/workspaces": {
-        "disable-scroll": true,
+	"persistent_workspaces": {
+		"1": [],
+		"2": [],
+	      	"3": [],
+		"4": [],
+		"5": []	
+      	},
+	"disable-scroll": true,
         "all-outputs": true,
-        "format": "{icon} {name}",
+        "format": "{icon}",
         "format-icons": {
-            "background": "",
-            "browser": "",
-            "terminals": "",
-            "code": "",
-            "work": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10",
+                "urgent": "",
+                "focused": "",
+                "default": ""
+            }
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -89,7 +101,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 80,
             "warning": 50,
             "critical": 15
         },
@@ -168,9 +180,11 @@
       "tooltip": false
     },
     "custom/bluetooth": {
-        "format": " {}",
-        "interval": 1,
+        "format": "{icon}{}",
+        "return-type": "json",
+        "interval": 10,
         "exec": "$HOME/.config/waybar/modules/bluetooth.sh",
-        "tooltip": false
+        "tooltip": false,
+        "format-icons": ["", "", ""]
     }
 }
