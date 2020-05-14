@@ -5,7 +5,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/updates", "pulseaudio", "network", "battery"],
+    "modules-right": ["custom/updates", "custom/bluetooth", "pulseaudio", "network", "battery"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -99,18 +99,19 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "interval": 5,
         "format-wifi": "{icon} {essid}",
         "format-ethernet": "{icon} {ifname}: {ipaddr}/{cidr}",
         "format-linked": " {ifname} (No IP)",
         "format-disconnected": "{icon} Disconnected",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-alt": "{ipaddr}  {bandwidthDownBits}  {bandwidthUpBits}",
         "format-icons": {
 	    "wifi": [""],
 	    "ethernet": ["🖧"],
@@ -141,7 +142,6 @@
         "tooltip": false
     },
 
-
 // CUSTOM MODULES
 // https://github.com/rDini/dotconfig
     "custom/weather": {
@@ -162,8 +162,15 @@
     },
     "custom/updates": {
       "format": "{} &#xf2f1;",
+      "interval": 1800,
       "signal": 12,
       "exec": "$HOME/.config/waybar/modules/updates.sh",
       "tooltip": false
+    },
+    "custom/bluetooth": {
+        "format": " {}",
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/modules/bluetooth.sh",
+        "tooltip": false
     }
 }

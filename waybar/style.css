@@ -23,7 +23,7 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode,
-#custom-updates {
+#custom-updates, #custom-bluetooth {
     padding: 0 10px;
     margin: 0 5px;
     color: #ffffff;
