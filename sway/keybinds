@@ -16,7 +16,7 @@ bindsym $mod+grave exec swaylock --image $wallpaper --clock --indicator --indica
 # Start a terminal
 bindsym $mod+Return exec $term
 # Kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 # Start your launcher
 bindsym $mod+d exec $menu
 

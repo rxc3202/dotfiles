@@ -13,9 +13,12 @@ for_window [window_type="dialog"] floating enable
 for_window [app_id="pavucontrol"] floating enable; resize set 500 300; move window to position 2050 0
 
 # FIREFOX
-assign [class="firefox"] $ws2
+assign [class="firefox"] $ws_browsers
 
 # SPOTIFY
-assign [class="Spotify"] $ws1
+assign [class="Spotify"] $ws_background
 # for_window [class="Spotify"] floating enable; resize set width 1600 height 900
+
+# VSCODE
+assign [class="code-oss"] $ws_code
 
