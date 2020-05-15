@@ -166,8 +166,7 @@
         "exec-if": "ping wttr.in -c1"
     },
     "custom/spotify": {
-            "format": " Spotify",
-            "format-alt": "{}",
+            "format": " {}",
 	    "interval": 1,
 	    "return-type": "json",
 	    "exec": "~/.config/waybar/modules/spotify.sh",
@@ -177,7 +176,6 @@
     "custom/updates": {
       "format": " {}",
       "return-type": "json",
-      "interval": 1800,
       "signal": 12,
       "exec": "$HOME/.config/waybar/modules/updates.sh --fetch",
       "tooltip": true,
@@ -186,7 +184,6 @@
     "custom/bluetooth": {
         "format": "{icon}{}",
         "return-type": "json",
-        "interval": 10,
         "exec": "$HOME/.config/waybar/modules/bluetooth.sh",
         "tooltip": false,
         "format-icons": ["", "", ""]
