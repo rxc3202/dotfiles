@@ -23,6 +23,9 @@ assign [class="code-oss"] $ws_code
 # VMWare Workstation
 for_window [class="Vmware"] floating enable; resize set width 1600 height 900;
 
+# feh
+for_window [class="feh"] floating enable; 
+
 # Custom Popup Confirmation Terminals
 for_window [title="pacman-update-confirm"] floating enable
 for_window [title="pacman-update-confirm"] mark "updater", move scratchpad, resize set width 1600 height 900, scratchpad show

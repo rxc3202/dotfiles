@@ -28,6 +28,6 @@ do
 
     out="{\"text\": \"$text\", \"percentage\":$percentage, \"class\":[\"$class\"]}"
     echo $out
-    sleep 30
+    sleep 5
 
 done
