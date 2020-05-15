@@ -1,7 +1,5 @@
 # https://github.com/Bonnee/dotfiles/blob/home_as_root/.config/sway/config.d/rules
 
-for_window [class="vlc"] floating enable
-for_window [class="Gpick"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -22,3 +20,6 @@ for_window [class="Spotify"] floating enable; resize set width 1600 height 900;
 # VSCODE
 assign [class="code-oss"] $ws_code
 
+# Custom Popup Confirmation Terminals
+for_window [title="pacman-update-confirm"] floating enable
+for_window [title="pacman-update-confirm"] mark "updater", move scratchpad, resize set width 1600 height 900, scratchpad show

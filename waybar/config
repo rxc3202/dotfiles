@@ -134,7 +134,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -167,6 +167,7 @@
     },
     "custom/spotify": {
             "format": " Spotify",
+            "format-alt": "{}",
 	    "interval": 1,
 	    "return-type": "json",
 	    "exec": "~/.config/waybar/modules/spotify.sh",
@@ -174,11 +175,13 @@
 	    "escape": true
     },
     "custom/updates": {
-      "format": "{} &#xf2f1;",
+      "format": " {}",
+      "return-type": "json",
       "interval": 1800,
       "signal": 12,
-      "exec": "$HOME/.config/waybar/modules/updates.sh",
-      "tooltip": false
+      "exec": "$HOME/.config/waybar/modules/updates.sh --fetch",
+      "tooltip": true,
+      "on-click": "$HOME/.config/waybar/modules/updates.sh --update"
     },
     "custom/bluetooth": {
         "format": "{icon}{}",
