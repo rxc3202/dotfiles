@@ -25,7 +25,7 @@ output * bg $wallpaper fill
 output eDP-1 scale 1 resolution 2560x1440 position 0,0
 
 ### Idle configuration
-exec swayidle -w timeout 300 'swaylock --image $wallpaper --clock --indicator --indicator-radius 200 --indicator-thickness 10 --effect-blur 7x5 --effect-vignette 0.5:0.5  --font jost --text-color d8dee990 --line-uses-inside --line-uses-ring --fade-in 0.15 --ignore-empty-password --inside-color 4c566a80 --ring-color d8dee980 --inside-ver-color 4c566a80 --ring-ver-color 8fbcbb80 --inside-wrong-color 4c566a80 --ring-wrong-color bf616a80 --text-ver-color d8dee990 --text-wrong-color bf616a80 --separator-color d8dee980'
+exec swayidle -w timeout 300 ' swaylock --image $wallpaper --clock --indicator --indicator-radius 200 --indicator-thickness 15 --effect-blur 7x5 --effect-vignette 0.5:0.5  --font jost --text-color d8dee999 --line-uses-inside --line-uses-ring --fade-in 0.15 --ignore-empty-password --inside-color 4c566a00 --ring-color d8dee980 --inside-ver-color 4c566a00 --ring-ver-color 8fbcbb80 --inside-wrong-color 4c566a80 --ring-wrong-color bf616a80 --inside-wrong-color 4c566a00 --text-ver-color d8dee990 --text-wrong-color bf616a90 --separator-color d8dee980'
 
 ### Input configuration
 input "2:7:SynPS/2_Synaptics_TouchPad" {
