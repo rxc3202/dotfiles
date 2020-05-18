@@ -5,7 +5,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/spotify"],
-    "modules-right": ["custom/updates", "pulseaudio", "network", "custom/bluetooth", "battery", "clock"],
+    "modules-right": ["custom/updates", "pulseaudio", "custom/bluetooth", "network", "battery", "clock"],
     "sway/workspaces": {
 	"persistent_workspaces": {
 		"1": [],
