@@ -5,7 +5,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/spotify"],
-    "modules-right": ["custom/updates", "pulseaudio", "custom/bluetooth", "network", "battery", "clock"],
+    "modules-right": ["custom/updates", "pulseaudio", "custom/bluetooth", "network", "battery", "clock", "idle_inhibitor"],
     "sway/workspaces": {
 	"persistent_workspaces": {
 		"1": [],
@@ -166,7 +166,7 @@
         "exec-if": "ping wttr.in -c1"
     },
     "custom/spotify": {
-            "format": " {}",
+            "format": "{}",
 	    "interval": 1,
 	    "return-type": "json",
 	    "exec": "~/.config/waybar/modules/spotify.sh",

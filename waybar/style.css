@@ -1,7 +1,8 @@
 * {
     font-weight: bold;
     border: none;
-    border-radius: 0; font-family: "SourceCodePro";
+    border-radius: 0;
+    font-family: "SourceCodePro";
     font-size: 17px;
     min-height: 0;
 }
@@ -22,7 +23,7 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode,
-#custom-updates, #custom-bluetooth, #custom-spotify{
+#idle_inhibitor, #custom-updates, #custom-bluetooth, #custom-spotify{
     padding: 0 10px;
     margin: 0 5px;
     color: #ffffff;
@@ -35,39 +36,38 @@ window#waybar {
 }
 
 #battery.charging {
-    border-top: 3px solid #8dbf8f;
+    /*border-top: 3px solid #8dbf8f;*/
     color: #8dbf8f;
 }
 
 #battery:not(.charging) {
-    border-top: 3px solid #a3be8c;
+    /*border-top: 3px solid #a3be8c;*/
     color: #a3be8c;
 }
 #battery.good:not(.charging) {
-    border-top: 3px solid #a3be8c;
+    /*border-top: 3px solid #a3be8c;*/
     color: #a3be8c;
 }
 #battery.medium:not(.charging) {
-    border-top: 3px solid #fdfd96;
+    /*border-top: 3px solid #fdfd96;*/
     color: #fdfd96;
 }
 #battery.warning:not(.charging) {
-    border-top: 3px solid #ebcb8b;
+    /*border-top: 3px solid #ebcb8b;*/
     color: #ebcb8b;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        color: #ffffff;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    /*border-top: 3px solid #bf616a;*/
     color: #bf616a;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -84,6 +84,17 @@ window#waybar {
 
 /* ======================= CPU CONFIGURATION ======================= */
 #cpu {
+}
+
+/* ======================= MEMORY CONFIGURATION ======================= */
+#idle_inhibitor {
+    background: transparent;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border-top: 0px;
+    border-bottom: 0px;
+    padding: 0 5px;
+    margin: 0 2px;
 }
 
 /* ======================= MEMORY CONFIGURATION ======================= */
@@ -153,5 +164,5 @@ window#waybar {
 
 /* ======================= SPOTIFY CONFIGURATION ======================= */
 #custom-spotify {
-    border-top: 3px solid #1DB954;
+    /*border-top: 3px solid #1DB954;*/
 }
