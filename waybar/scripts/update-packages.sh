@@ -7,9 +7,10 @@ sudo pacman -Syu
 
 # Recommend Restart
 echo "Would you like to restart? [Y/n]"
-read response -n1 -r
+read -n1 -r response
 
 if [ $response == "Y" ]; then
+    echo "Shutting Down ..."
     sudo shutdown -r 0
 fi
 

@@ -1,5 +1,6 @@
 #! /bin/sh
 # https://github.com/Bonnee/dotfiles/blob/home_as_root/.config/waybar/scripts/updates
+# Make sure to enable to cronjob to synch repos "pacman -Sy"
 title="pacman-update-confirm"
 script="$HOME/.config/waybar/scripts/update-packages.sh"
 
@@ -20,6 +21,6 @@ if [ "$#" -eq "1" ] && [ "$1" = "--fetch" ]; then
             if [ "$num_updates" -gt "0" ]; then
                 echo $out
             fi
-        sleep 1800
+        sleep 60
         done
 fi
