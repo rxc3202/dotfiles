@@ -14,14 +14,14 @@ for_window [app_id="pavucontrol"] floating enable; resize set 500 300; move wind
 assign [class="firefox"] $ws_browsers
 
 # SPOTIFY
-for_window [class="Spotify"] move container to workspace $ws_background
+for_window [class="Spotify"] move container to workspace $ws_background;
 for_window [class="Spotify"] floating enable; resize set width 1600 height 900;
 
 # VSCODE
 assign [class="code-oss"] $ws_code
 
 # VMWare Workstation
-for_window [class="Vmware"] floating enable; resize set width 1600 height 900;
+for_window [class="Vmware"] move containre to workspace $ws_work;
 
 # feh
 for_window [class="feh"] floating enable; 
