@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/bash
 
 # Update the Packages
 echo "Packages Upgraded:"
@@ -7,7 +7,7 @@ sudo pacman -Syu
 
 # Recommend Restart
 echo "Would you like to restart? [Y/n]"
-read -n1 -r response
+read -n 1 -r response
 
 if [ $response == "Y" ]; then
     echo "Shutting Down ..."

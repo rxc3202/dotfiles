@@ -23,7 +23,7 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode,
-#idle_inhibitor, #custom-updates, #custom-bluetooth, #custom-spotify{
+#idle_inhibitor, #custom-updates, #custom-bluetooth, #custom-spotify, #backlight {
     padding: 0 10px;
     margin: 0 5px;
     color: #ffffff;

@@ -5,7 +5,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/spotify"],
-    "modules-right": ["custom/updates", "pulseaudio", "custom/bluetooth", "network", "battery", "clock", "idle_inhibitor"],
+    "modules-right": ["custom/updates", "pulseaudio", "custom/bluetooth", "network", "battery", "clock", "backlight", "idle_inhibitor"],
     "sway/workspaces": {
 	"persistent_workspaces": {
 		"1": [],
@@ -152,6 +152,10 @@
         "on-click": "pulseaudio; pavucontrol",
         "on-click-right": "pkill pavucontrol",
         "tooltip": false
+    },
+
+    "backlight": {
+        "format": " {percent}%"
     },
 
 // CUSTOM MODULES
