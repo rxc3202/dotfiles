@@ -21,13 +21,16 @@ for_window [class="Spotify"] floating enable; resize set width 1600 height 900;
 assign [class="code-oss"] $ws_code
 
 # VMWare Workstation
-for_window [class="Vmware"] move containre to workspace $ws_work;
+for_window [class="Vmware"] move container to workspace $ws_work;
 
 # feh
 for_window [class="feh"] floating enable; 
 
 # SLACK
 for_window [class="Slack"] move container to workspace $ws_background;
+
+# ZOOM
+for window [class="zoom"] floating enable;
 
 # Custom Popup Confirmation Terminals
 for_window [title="pacman-update-confirm"] floating enable
