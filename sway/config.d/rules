@@ -30,7 +30,7 @@ for_window [class="feh"] floating enable;
 for_window [class="Slack"] move container to workspace $ws_background;
 
 # ZOOM
-for window [class="zoom"] floating enable;
+for_window [class="zoom"] floating enable;
 
 # Custom Popup Confirmation Terminals
 for_window [title="pacman-update-confirm"] floating enable
