@@ -2,8 +2,8 @@
 
 # Update the Packages
 echo "Packages Upgraded:"
-pacman -Qu
-sudo pacman -Syu
+yay -Qu
+yay -Syu
 
 # Recommend Restart
 echo "Would you like to restart? [Y/n]"

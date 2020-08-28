@@ -13,14 +13,10 @@ if [ "$#" -eq "1" ] && [ "$1" = "--update" ]; then
 fi
 
 if [ "$#" -eq "1" ] && [ "$1" = "--fetch" ]; then
-    while :
-        do
-            updates=$(pacman -Qu | awk -F"->" '{print $1}' | cut -d" " -f1)
-            num_updates=$(pacman -Qu | wc -l)
-            out="{\"text\": \"$num_updates\", \"tooltip\": \"New Versions: $updates\"}"
-            if [ "$num_updates" -gt "0" ]; then
-                echo $out
-            fi
-        sleep 60
-        done
+    updates=$(pacman -Qu | awk -F"->" '{print $1}' | cut -d" " -f1)
+    num_updates=$(pacman -Qu | wc -l)
+    out="{\"text\": \"$num_updates\", \"tooltip\": \"New Versions: $updates\"}"
+    if [ "$num_updates" -gt "0" ]; then
+        echo $out
+    fi
 fi

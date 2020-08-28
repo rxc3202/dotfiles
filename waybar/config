@@ -177,10 +177,12 @@
 	    "exec-if": "pgrep spotify",
 	    "escape": true
     },
+    // MUST HAVE CRON UPDATING LIBRARIES
     "custom/updates": {
       "format": " {}",
       "return-type": "json",
       "signal": 12,
+      "interval": 60,
       "exec": "$HOME/.config/waybar/modules/updates.sh --fetch",
       "tooltip": true,
       "on-click": "$HOME/.config/waybar/modules/updates.sh --update"
@@ -188,6 +190,7 @@
     "custom/bluetooth": {
         "format": "{icon}{}",
         "return-type": "json",
+        "interval": 5,
         "exec": "$HOME/.config/waybar/modules/bluetooth.sh",
         "tooltip": false,
         "format-icons": ["", "", ""]
