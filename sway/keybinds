@@ -8,19 +8,26 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 
 # Screenshots
-bindsym $mod+Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshots/screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
+bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshots/screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
 
-bindsym $mod+Print exec grim -o ~/Pictures/screenshots/screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
+bindsym Print exec grim ~/Pictures/screenshots/screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
 
 # Lockscreen
 bindsym $mod+grave exec swaylock --image $wallpaper --clock --indicator --indicator-radius 202 --indicator-thickness 15 --effect-blur 7x5 --effect-vignette 0.5:0.5  --font jost --text-color d8dee999 --line-uses-inside --line-uses-ring --fade-in 0.15 --ignore-empty-password --inside-color 4c566a00 --ring-color d8dee980 --inside-ver-color 4c566a00 --ring-ver-color 8fbcbb80 --inside-wrong-color 4c566a80 --ring-wrong-color bf616a80 --inside-wrong-color 4c566a00 --text-ver-color d8dee990 --text-wrong-color bf616a90 --separator-color d8dee980
 
 # Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Super_L exec $term
 # Kill focused window
 bindsym $mod+q kill
-# Start your launcher
-bindsym $mod+d exec $menu
+# Start Launcher
+bindsym $mod+Return exec $launcher
+# Show Windows
+bindsym $mod+Tab exec $windows
+# Calculator (https://github.com/svenstaro/rofi-calc)
+bindsym $mod+c exec $calc
+# Emojis (https://github.com/fdw/rofimoji)
+bindsym $mod+e exec $emojis
+
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

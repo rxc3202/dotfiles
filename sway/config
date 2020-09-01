@@ -1,4 +1,3 @@
-
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
 
@@ -12,10 +11,14 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu "rofi -combi-modi drun,ssh,run -show combi -show-icons -theme slate"
+
+# Rofi Shortcuts
+# Fontawesome Cheatsheet for icons https://fontawesome.com/cheatsheet
+set $calc "rofi -show calc -modi calc -no-show-match -no-sort -theme slate"
+set $launcher "rofi -modi drun -show drun -show-icons -theme slate"
+set $windows "rofi -modi window -show window -theme slate"
+set $emojis exec rofimoji --rofi-args="-theme slate"
+
 
 ### Background
 set $wallpaper "~/Pictures/wallpapers/mountain-blue.jpg"
@@ -97,7 +100,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+t layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+y layout toggle split
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
     # Toggle the current focus between tiling and floating mode

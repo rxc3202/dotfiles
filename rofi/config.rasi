@@ -1,5 +1,8 @@
 configuration {
     display-combi: "";
+    display-calc: "🖩";
+    display-drun: "";
+    display-window: "";
     show-icons: true;
     sidebar-mode: false;
     lines: 7;
