@@ -14,10 +14,12 @@ set $term alacritty # Your preferred application launcher
 
 # Rofi Shortcuts
 # Fontawesome Cheatsheet for icons https://fontawesome.com/cheatsheet
+set $rofi_scripts "~/.config/rofi/scripts"
 set $calc "rofi -show calc -modi calc -no-show-match -no-sort -theme slate"
 set $launcher "rofi -modi drun -show drun -show-icons -theme slate"
 set $windows "rofi -modi window -show window -theme slate"
-set $emojis exec rofimoji --rofi-args="-theme slate"
+set $emojis rofimoji --rofi-args="-theme slate"
+set $media "$rofi_scripts/media/media.sh"
 
 
 ### Background

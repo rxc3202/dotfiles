@@ -27,6 +27,8 @@ bindsym $mod+Tab exec $windows
 bindsym $mod+c exec $calc
 # Emojis (https://github.com/fdw/rofimoji)
 bindsym $mod+e exec $emojis
+# Media control
+bindsym $mod+m exec $media
 
 
 # Drag floating windows by holding down $mod and left mouse button.
