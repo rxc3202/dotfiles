@@ -19,4 +19,18 @@ set softtabstop=4		" Number of spaces per Tab
 " Plugins
 call plug#begin('~/.vim/nvim-plugs')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+" COC Configuration
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
