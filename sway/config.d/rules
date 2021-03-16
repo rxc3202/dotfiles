@@ -11,23 +11,26 @@ for_window [window_type="dialog"] floating enable
 for_window [app_id="pavucontrol"] floating enable; resize set 500 300; move window to position 2050 0
 
 # FIREFOX
-assign [class="firefox"] $ws_browsers
+#assign [class="firefox"] $ws_browsers
+
+# SIGNAL
+for_window [class="signal"] floating enable; resize set width 1600 height 900;
 
 # SPOTIFY
 for_window [class="Spotify"] move container to workspace $ws_background;
 for_window [class="Spotify"] floating enable; resize set width 1600 height 900;
 
 # VSCODE
-assign [class="code-oss"] $ws_code
+#assign [class="code-oss"] $ws_code
 
 # VMWare Workstation
-for_window [class="Vmware"] move container to workspace $ws_work;
+#for_window [class="Vmware"] move container to workspace $ws_work;
 
 # feh
 for_window [class="feh"] floating enable; 
 
 # SLACK
-for_window [class="Slack"] move container to workspace $ws_background;
+#for_window [class="Slack"] move container to workspace $ws_background;
 
 # ZOOM
 for_window [class="zoom"] floating enable;
