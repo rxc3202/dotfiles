@@ -10,7 +10,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty # Your preferred application launcher
+set $term kitty # Your preferred application launcher
 
 # Rofi Shortcuts
 # Fontawesome Cheatsheet for icons https://fontawesome.com/cheatsheet

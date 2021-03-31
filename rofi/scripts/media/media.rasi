@@ -8,7 +8,7 @@ configuration {
     border-color: #2e343f;
     text-color: #8ca0aa;
     spacing: 0;
-    width: 801px;
+    width: 601px;
 }
 
 inputbar {

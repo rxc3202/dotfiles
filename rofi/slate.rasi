@@ -44,3 +44,8 @@ element selected {
     border-color: #81a1c1;
     border: 1px 1px 1px 1px;
 }
+
+element-icon {
+    size: 2ch;
+}
+

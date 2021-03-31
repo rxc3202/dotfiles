@@ -21,6 +21,8 @@ call plug#begin('~/.vim/nvim-plugs')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'ntk148v/vim-horizon'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " COC Configuration
@@ -34,3 +36,15 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+
+" Horizon Configuration w/ Lightline
+set termguicolors
+
+colorscheme horizon
+
+" lightline
+let g:lightline = {}
+let g:lightline.colorscheme = 'horizon'
+
+" or this line
+let g:lightline = {'colorscheme' : 'horizon'}
